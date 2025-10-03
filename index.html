@@ -49,17 +49,18 @@
     .nav {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1.2rem 2.2rem;
-      display: flex;
+      padding: 0.65rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      justify-content: space-between;
       gap: 2rem;
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      grid-column: 2;
+      justify-self: center;
       text-decoration: none;
       color: var(--text);
       font-weight: 700;
@@ -67,14 +68,15 @@
     }
 
     .logo img {
-      width: 52px;
-      height: 52px;
+      width: 72px;
+      height: 72px;
       object-fit: contain;
       filter: drop-shadow(0 8px 18px rgba(15, 139, 92, 0.18));
     }
 
-    .logo span {
-      font-size: 1.1rem;
+    .nav nav {
+      grid-column: 3;
+      justify-self: end;
     }
 
     nav ul {
@@ -574,7 +576,7 @@
 
     @media (max-width: 600px) {
       .nav {
-        padding: 1rem 1.4rem;
+        padding: 0.75rem 1.4rem;
       }
 
       section {
@@ -590,9 +592,8 @@
 <body>
   <header>
     <div class="nav">
-      <a class="logo" href="#top">
+      <a class="logo" href="#top" aria-label="Fairway Horizons Golf Club home">
         <img src="2aa2b293-7a61-464a-ac11-845faadb1e9c.png" alt="Fairway Horizons logo" />
-        <span>Fairway Horizons Golf Club</span>
       </a>
       <nav>
         <ul>
