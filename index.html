@@ -74,7 +74,12 @@
       filter: drop-shadow(0 8px 18px rgba(15, 139, 92, 0.18));
     }
 
-    .nav nav {
+    .nav-left {
+      grid-column: 1;
+      justify-self: start;
+    }
+
+    .nav-right {
       grid-column: 3;
       justify-self: end;
     }
@@ -592,14 +597,17 @@
 <body>
   <header>
     <div class="nav">
-      <a class="logo" href="#top" aria-label="Fairway Horizons Golf Club home">
-        <img src="2aa2b293-7a61-464a-ac11-845faadb1e9c.png" alt="Fairway Horizons logo" />
-      </a>
-      <nav>
+      <nav class="nav-left" aria-label="Primary">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#membership">Membership</a></li>
+        </ul>
+      </nav>
+      <a class="logo" href="#top" aria-label="Fairway Horizons Golf Club home">
+        <img src="2aa2b293-7a61-464a-ac11-845faadb1e9c.png" alt="Fairway Horizons logo" />
+      </a>
+      <nav class="nav-right" aria-label="Secondary">
+        <ul>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
