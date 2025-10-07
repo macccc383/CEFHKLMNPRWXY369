@@ -85,12 +85,22 @@
 
     .nav-left {
       grid-column: 1;
-      justify-self: start;
+      justify-self: stretch;
+      display: flex;
+      justify-content: center;
     }
 
     .nav-right {
       grid-column: 3;
-      justify-self: end;
+      justify-self: stretch;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-left ul,
+    .nav-right ul {
+      justify-content: center;
+      width: 100%;
     }
 
     nav ul {
